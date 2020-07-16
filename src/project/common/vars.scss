@@ -1,31 +1,11 @@
 // Font
-//$mainFont: "Montserrat", Helvetica, Arial, sans-serif;
-//$fontFamily_1: "Montserrat", Helvetica, Arial, sans-serif;
-//$fontFamily_2: "Quicksand", "OpenSans", sans-serif;
-$mainFont: "Montserrat";
-$fontFamily_1: "Montserrat";
-$fontFamily_2: "Quicksand";
-//$fontFamily_2: "OpenSans";
+$mainFont: "Quicksand", Helvetica, Arial, sans-serif;
+
 //Переменные>==========================================================================================================================================
 // Size
 $minwidth: 320px;
 
 $fontColor_1-0: #8f90a0; //0.50
-$fontColor_1-1: #c7c7cf; //0.25
-$fontColor_1-2: #575871; //0.75 rgba(31, 32, 65, 0.75);
-$fontColor_1-3: #1f2041;
-
-$fontColor_2-0: #bc9cff;
-
-$FontColorLight: #c7c7cf;
-$fontColor_light: #c7c7cf;
-
-$mainFontColor: #8f90a0;
-$secondaryFontColor: #bc9cff;
-$FontColor_2: #bc9cff;
-
-$thirdFontColor: #575871;
-$fontColor_third: #575871;
 
 $mainFontSize: 14px;
 $mainFontWeight: 400;
@@ -37,31 +17,9 @@ $tableWidth: 768px;
 $phoneWidth: 480px;
 $smPhoneWidth: 320px;
 
-// Main color
-/*
-$default-color: #ffffff;
-$primary-color: #444ce0;
-$success-color: #26de81;
-$danger-color: #fc5c65;
-$warning-color: #fed330;
-$light-color: #999999;
-$purple-color: #8854d0;
-*/
-
 //Gradients
 $mainGradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 $secondaryGradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 
-// Neutral Color
-$neutral-primary: #303133;
-$neutral-regular: #606266;
-$neutral-secondary: #909399;
-$neutral-placeholder: #c0c4cc;
-
 // Border Color
-$borderColor_1-1: $fontColor_1-1; //0.25
-$borderColor_1-0: $fontColor_1-0; //0.50
-$border-base: #c7c7cf;
-$border-active: #8f90a0;
-$border-shadow: rgba(31, 32, 65, 0.05);
-$border-lightex: #f2f6fc;
+$borderColor_1-0: #8f90a0;
