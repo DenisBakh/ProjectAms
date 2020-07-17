@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "./";
+/******/ 	__webpack_require__.p = "";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -152,7 +152,9 @@ var map = {
 	"./common/fonts/Quicksand-Bold.svg": "./project/common/fonts/Quicksand-Bold.svg",
 	"./common/fonts/Quicksand-Regular.svg": "./project/common/fonts/Quicksand-Regular.svg",
 	"./common/fonts/open-sans-v17-latin_cyrillic-700.svg": "./project/common/fonts/open-sans-v17-latin_cyrillic-700.svg",
-	"./common/fonts/open-sans-v17-latin_cyrillic-regular.svg": "./project/common/fonts/open-sans-v17-latin_cyrillic-regular.svg"
+	"./common/fonts/open-sans-v17-latin_cyrillic-regular.svg": "./project/common/fonts/open-sans-v17-latin_cyrillic-regular.svg",
+	"./static/Logo_ams_software_.png": "./project/static/Logo_ams_software_.png",
+	"./static/favicon.ico": "./project/static/favicon.ico"
 };
 
 
@@ -512,6 +514,28 @@ module.exports = __webpack_require__.p + "assets/fonts/open-sans-v17-latin_cyril
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/fonts/open-sans-v17-latin_cyrillic-regular.woff2";
+
+/***/ }),
+
+/***/ "./project/static/Logo_ams_software_.png":
+/*!***********************************************!*\
+  !*** ./project/static/Logo_ams_software_.png ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/img/Logo_ams_software_.png";
+
+/***/ }),
+
+/***/ "./project/static/favicon.ico":
+/*!************************************!*\
+  !*** ./project/static/favicon.ico ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/img/favicon.ico";
 
 /***/ }),
 

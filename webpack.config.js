@@ -51,7 +51,9 @@ const cssLoaders = extra => {
 			loader: MiniCssExtractPlugin.loader,
 			options: {
 				hmr: isDev,
-				reloadAll: true
+				reloadAll: true,
+				//publicPath: '../../'
+				//publicPath: '/assets'
 			},
 		},
 		'css-loader',
@@ -149,7 +151,7 @@ module.exports = {
 		//path: path.resolve(__dirname, 'dist')
 		filename: filenameJs(), //filename('js'),
 		path: PATHS.dist,
-		publicPath: '/'
+		//publicPath: '/'
 	},
 	resolve: {
 		//extensions: [],
@@ -157,6 +159,7 @@ module.exports = {
 			'@styles': path.resolve(__dirname, 'src/styles'),
 			'~': PATHS.src,
 			'vue$': 'vue/dist/vue.js',
+			'~~': PATHS.dist,
 		}
 	},
 	optimization: optimization(),
@@ -208,6 +211,7 @@ module.exports = {
 				use: [
 					{
 						loader: 'file-loader',
+						//loader: 'file-loader?name=/fonts/[name].[ext]',
 						options: {
 							outputPath: `${PATHS.assets}fonts`,
 							name: '[name].[ext]',

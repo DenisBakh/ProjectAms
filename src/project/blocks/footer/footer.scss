@@ -1,0 +1,151 @@
+/*===================FOOTER============================================*/
+
+.footer-disabled {
+	display: none;
+}
+
+.footer {
+	font-family: $fontFamily_1;
+	background: #fff;
+	color: $fontColor_1-2;
+	&__copyright {
+		@media (max-width: 450px) {
+			margin: 0 0 10px 0;
+			text-align: center;
+		}
+	}
+	&__container {
+		max-width: 620px;
+	}
+	&__top {
+		padding: 100px 0 85px 0;
+		@media (max-width: 1000px) {
+			padding: 40px 0;
+		}
+		@media (max-width: 400px) {
+			padding: 20px 0;
+		}
+	}
+	&__down {
+		border-top: 1px solid $borderColor_1-1;
+		padding: 24px 0;
+	}
+	&__row {
+		display: flex;
+		align-items: flex-start;
+		margin: 0 -20px;
+		justify-content: center;
+		&_down {
+			justify-content: space-between;
+			margin: 0;
+			align-items: center;
+		}
+		@media (max-width: 1000px) {
+			flex-wrap: wrap;
+		}
+		@media (max-width: 650px) {
+			flex-wrap: nowrap;
+		}
+		@media (max-width: 450px) {
+			flex-direction: column;
+		}
+	}
+	&__column {
+		padding: 0 20px;
+		flex: 0 1 17%;
+		@media (max-width: 1000px) {
+			flex: 0 1 25%;
+		}
+		&_title {
+			flex: 0 1 24.5%;
+			@media (max-width: 1000px) {
+				flex: 0 1 100%;
+				display: flex;
+				justify-content: center;
+				text-align: center;
+				margin: 0 0 25px 0;
+			}
+			@media (max-width: 650px) {
+				flex: 0 1 50%;
+			}
+			@media (max-width: 400px) {
+				margin: 0 0 10px 0;
+			}
+		}
+		&_full {
+			flex: 0 1 100%;
+			display: flex;
+			justify-content: center;
+		}
+		&_subscribe {
+			flex: 0 1 24.5%;
+			@media (max-width: 650px) {
+				flex: 0 1 50%;
+			}
+		}
+		&_forWide {
+			@media (max-width: 650px) {
+				display: none;
+			}
+		}
+	}
+}
+
+.footer-logo {
+	&__logotype {
+		margin: 0 0 16px 0;
+	}
+	&_mini {
+		text-align: center;
+		max-width: 600px;
+	}
+	&__social {
+		margin: 30px 0 0 0;
+	}
+	@media (max-width: 1000px) {
+		width: 320px;
+	}
+	@media (max-width: 650px) {
+		width: auto;
+	}
+}
+.footer-text {
+	font-size: 14px;
+	line-height: 1.75em;
+	color: $fontColor_1-2;
+	&_forWide {
+		@media (max-width: 450px) {
+			display: none;
+		}
+	}
+}
+
+.footer-list {
+	&__label {
+		margin: 0 0 20px 0;
+	}
+	&__list {
+		font-size: 14px;
+		line-height: 1.2em;
+		color: $fontColor_1-0;
+	}
+	&__item {
+		margin: 0 0 22px 0;
+	}
+	&__link {
+		display: inline-flex;
+		font-size: inherit;
+		font-weight: inherit;
+		color: inherit;
+		font-family: inherit;
+		&:hover {
+			color: $fontColor_1-0;
+			font-weight: 700;
+			transform: scale(1.1);
+			@include transition;
+		}
+	}
+	&__subscribe {
+		margin: 20px 0 0 0;
+	}
+}

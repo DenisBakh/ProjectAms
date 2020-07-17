@@ -1,0 +1,79 @@
+include /project/common.blocks/ui_kit/form_elements/text-field/text-field.pug
+include /project/common.blocks/ui_kit/logotype/logotype.pug
+include /project/common.blocks/ui_kit/form_elements/bullet-list/bullet-list.pug
+include /project/common.blocks/_common/social/social.pug
+
+
+mixin footer(style='norm',footerMenu,footerText,footerSubscr,footerSubscrText,footerSubscrBtn,footerCopyRight)
+	footer.footer
+		if style==='mini'
+			.footer__top
+				.container.footer__container
+					.footer__row
+						.footer__column.footer__column_title.footer__column_full
+							.footer-logo.footer-logo_mini
+								.footer-logo__logotype
+									+logotype()
+								p.footer-text=footerText 
+								.footer-logo__social
+									+social()
+						for list in footerMenu
+							.footer__column.footer-disabled
+								.footer-list
+									.footer-list__label
+										.label
+											h4.label__title=list.label
+									ul.footer-list__list
+										for item in list.li
+											li.footer-list__item
+												a(href=item.link).footer-list__link=item.text
+						.footer__column.footer__column_subscribe.footer-disabled
+							.footer-list
+								.footer-list__label
+									.label
+										h4.label__title=footerSubscrTitle
+								p.footer-text=footerSubscrText
+								.footer-list__subscribe
+									+subscribe("email_sub", footerSubscrBtn, label="",value="", descr="")
+			.footer__down.footer-disabled
+				.container
+					.footer__row.footer__row_down
+						p.footer__copyright=footerCopyRight
+						.footer__social
+							+social()
+		else
+			.footer__top
+				.container
+					.footer__row
+						.footer__column.footer__column_title
+							.footer-logo
+								.footer-logo__logotype
+									+logotype()
+								p.footer-text.footer-text_forWide=footerText
+								.footer-logo__social.footer-disabled
+									+social()
+						for list in footerMenu
+							.footer__column.footer__column_forWide
+								.footer-list
+									.footer-list__label
+										.label
+											h4.label__title=list.label
+									ul.footer-list__list
+										for item in list.li
+											li.footer-list__item
+												a(href=item.link).footer-list__link=item.text
+						.footer__column.footer__column_subscribe
+							.footer-list
+								.footer-list__label
+									.label
+										h4.label__title=footerSubscrTitle
+								p.footer-text=footerSubscrText
+								.footer-list__subscribe
+									+subscribe("email_sub", footerSubscrBtn, label="",value="", descr="")
+			.footer__down
+				.container
+					.footer__row.footer__row_down
+						p.footer__copyright=footerCopyRight
+						.footer__social
+							.social
+								+social()

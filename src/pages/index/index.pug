@@ -1,11 +1,25 @@
+include /project/blocks/header/header.pug
+
 doctype html
 html(lang="ru")
 	head
 		meta(charset='UTF-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
-		link(rel="icon" href="assets/img/favicon.png")
+		link(rel="icon" href="assets/img/favicon.ico")
 		title='Главная'
 	body
-		header.header
+		.wrapper
+			-
+				var headerMenu = [
+					{text: 'О нас', link:'#',submenu:''}, 
+					{text: 'Услуги', link:'#',submenu:['Консьерж','Будильник','Завтрак','Гид и экскурсии']}, 
+					{text: 'Вакансии', link:'#',submenu:''},
+					{text: 'Новости', link:'#',submenu:''},
+					{text: 'Соглашения', link:'#',submenu:['Правила','Спонсорство и инвестиции','Лицензии']}
+				]
+			- var headerLoginButton = [{text: 'войти', link:'registration.html#enter',type:'', mode:'button_border'}]
+			- var headerRegButton =[{text: 'зарегистрироваться', link:'registration.html#registration',type:'',mode:'button'}]
+			+header('unlogged', headerMenu, headerLoginButton,headerRegButton)
+
+
 		main.main
-			h1.main__title Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium eligendi placeat eos distinctio assumenda aliquid aspernatur fugit, eum minus optio ducimus enim, pariatur sint nulla quisquam. Doloremque eius alias laudantium!

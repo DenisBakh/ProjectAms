@@ -3,3 +3,7 @@
 @import "~/project/common/mixins.scss";
 @import "~/project/common/fonts.scss";
 @import "~/project/common/start.scss";
+
+//Header
+@import "~/project/blocks/header/submenu/submenu.scss";
+@import "~/project/blocks/header/header.scss";
