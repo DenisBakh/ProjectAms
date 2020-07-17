@@ -53,7 +53,7 @@ const cssLoaders = extra => {
 				hmr: isDev,
 				reloadAll: true,
 				//publicPath: '../../'
-				//publicPath: '/assets'
+				publicPath: '/'
 			},
 		},
 		'css-loader',
@@ -141,7 +141,7 @@ const plugins = () => {
 
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
-	mode: 'development',
+	mode: 'production',
 	entry: {
 		main: ['./entry/main.js'],
 		index: ['./pages/index/index.js'],
@@ -151,7 +151,7 @@ module.exports = {
 		//path: path.resolve(__dirname, 'dist')
 		filename: filenameJs(), //filename('js'),
 		path: PATHS.dist,
-		//publicPath: '/'
+		publicPath: './'
 	},
 	resolve: {
 		//extensions: [],
