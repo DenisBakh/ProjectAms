@@ -1,6 +1,27 @@
 @import "~/entry/main.scss";
 
+.container {
+	max-width: 1010px;
+	padding: 0 20px;
+	margin: 0 auto;
+	@media (max-width: 430px) {
+		padding: 0 23px;
+	}
+	&_footer {
+		@media (max-width: 430px) {
+			padding: 0 30px;
+		}
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
 .main {
+	flex: 1 1 auto;
 	&__title {
 		font-family: $mainFont;
 	}

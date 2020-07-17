@@ -5,16 +5,16 @@ mixin header(logged='unlogged',menu,loginButton,regButton,fixed='true')
 	if fixed==='true'
 		.header.header_fixed
 			.container
+				.header__burger
+					.burger-menu
+						.burger-menu__line
+						.burger-menu__line
+						.burger-menu__line
 				.header__row
 					.header__logo
 						a.logotype(href='index.html')
 							.logotype__img
 								img(src='assets/img/Logo_ams_software_.png', alt='logo')
-						.header__burger
-							.burger-menu
-								.burger-menu__line
-								.burger-menu__line
-								.burger-menu__line
 					.header__navigation
 						.header-menu
 							.header-menu__nav
@@ -34,14 +34,14 @@ mixin header(logged='unlogged',menu,loginButton,regButton,fixed='true')
 			.container
 				.header__row
 					.header__logo
-						a.logotype(href='index.html')
-							.logotype__img
-								img(src='assets/img/Logo_ams_software_.png', alt='logo')
 						.header__burger
 							.burger-menu
 								.burger-menu__line
 								.burger-menu__line
 								.burger-menu__line
+						a.logotype(href='index.html')
+							.logotype__img
+								img(src='assets/img/Logo_ams_software_.png', alt='logo')
 					.header__navigation
 						.header-menu
 							.header-menu__nav

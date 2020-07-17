@@ -4,6 +4,11 @@
 @import "~/project/common/fonts.scss";
 @import "~/project/common/start.scss";
 
+//common blocks
+@import "~/project/blocks/dropdawn-icon/dropdawn-icon.scss";
+
 //Header
 @import "~/project/blocks/header/submenu/submenu.scss";
 @import "~/project/blocks/header/header.scss";
+//Footer
+@import "~/project/blocks/footer/footer.scss";

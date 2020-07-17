@@ -53,10 +53,18 @@ const cssLoaders = extra => {
 				hmr: isDev,
 				reloadAll: true,
 				//publicPath: '../../'
-				publicPath: '/'
+				//publicPath: './'
 			},
 		},
-		'css-loader',
+		{
+			loader: 'css-loader',
+			options: {
+				//url: false,
+			}
+
+		},
+
+		'resolve-url-loader',
 		{
 			loader: 'postcss-loader',
 			options: {
@@ -151,15 +159,17 @@ module.exports = {
 		//path: path.resolve(__dirname, 'dist')
 		filename: filenameJs(), //filename('js'),
 		path: PATHS.dist,
-		publicPath: './'
+		publicPath: '/'
 	},
+
+	context: path.resolve(__dirname, 'src'),
+
 	resolve: {
 		//extensions: [],
 		alias: {
 			'@styles': path.resolve(__dirname, 'src/styles'),
 			'~': PATHS.src,
 			'vue$': 'vue/dist/vue.js',
-			'~~': PATHS.dist,
 		}
 	},
 	optimization: optimization(),
@@ -210,7 +220,7 @@ module.exports = {
 				test: /\.(ttf|woff|woff2|eot)$/,
 				use: [
 					{
-						loader: 'file-loader',
+						loader: 'url-loader',
 						//loader: 'file-loader?name=/fonts/[name].[ext]',
 						options: {
 							outputPath: `${PATHS.assets}fonts`,

@@ -1,5 +1,5 @@
 // SCSS
-import '~/entry/main.scss'
+
 // JS
 
 

@@ -1,0 +1,44 @@
+//=================dropdawn - icon============
+.dropdawn-icon {
+	position: absolute;
+	cursor: pointer;
+	right: 0;
+	top: 0;
+	width: 40px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&::before {
+		content: "";
+		@include transition;
+		display: block;
+		//position: absolute;
+		//right: 4.5px;
+		transform: translate(1.75px) rotate(45deg);
+		width: 8px;
+		height: 2px;
+		background-color: $fontColor_1-0;
+		z-index: 1;
+	}
+	&::after {
+		content: "";
+		@include transition;
+		display: block;
+		//position: absolute;
+		//right: 0px;
+		transform: translate(-1.75px) rotate(-45deg);
+		width: 8px;
+		height: 2px;
+		background-color: $fontColor_1-0;
+		z-index: 1;
+	}
+	&.active {
+		&::after {
+			transform: translate(-6.25px, -50%) rotate(-45deg);
+		}
+		&::before {
+			transform: translate(6.25px, -50%) rotate(45deg);
+		}
+	}
+}

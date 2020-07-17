@@ -1,4 +1,5 @@
 include /project/blocks/header/header.pug
+include /project/blocks/footer/footer.pug
 
 doctype html
 html(lang="ru")
@@ -10,16 +11,27 @@ html(lang="ru")
 	body
 		.wrapper
 			-
-				var headerMenu = [
-					{text: 'О нас', link:'#',submenu:''}, 
-					{text: 'Услуги', link:'#',submenu:['Консьерж','Будильник','Завтрак','Гид и экскурсии']}, 
-					{text: 'Вакансии', link:'#',submenu:''},
-					{text: 'Новости', link:'#',submenu:''},
-					{text: 'Соглашения', link:'#',submenu:['Правила','Спонсорство и инвестиции','Лицензии']}
+				const headerMenu = [
+					{text: 'Наши предложения', link:'#',submenu:''}, 
+					{text: 'Поддержка', link:'#',submenu:''}, 
+					//{text: 'Соглашения', link:'#',submenu:['Правила','Спонсорство и инвестиции','Лицензии']}
 				]
-			- var headerLoginButton = [{text: 'войти', link:'registration.html#enter',type:'', mode:'button_border'}]
-			- var headerRegButton =[{text: 'зарегистрироваться', link:'registration.html#registration',type:'',mode:'button'}]
 			+header('unlogged', headerMenu, headerLoginButton,headerRegButton)
 
 
-		main.main
+			main.main
+
+
+
+
+			-
+				const footerMenu = [
+					{text: 'Лицензионное соглашение', link:'#'}, 
+					{text: 'Политика конфиденциальности', link:'#'}, 
+					{text: 'О компании', link:'#'}, 
+				]
+			-const footerCopyRight='© 2020 PhotoDiva − портретный фоторедактор'
+			+footer(footerMenu,footerCopyRight)
+
+
+

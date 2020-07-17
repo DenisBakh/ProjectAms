@@ -6,9 +6,20 @@
 	}
 }
 
+.logotype {
+	&__img > img {
+		@media (max-width: 1000px) {
+			height: 33px;
+		}
+	}
+}
+
 .header {
-	background: #fff;
-	padding: 15px 0;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+	background-color: #1f2532;
+	background-size: cover;
+	padding: 15px 0 23px 0;
+	//height: 94px;
 	width: 100%;
 	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 	position: relative;
@@ -17,6 +28,9 @@
 		position: fixed;
 		top: 0;
 		left: 0;
+	}
+	@media (max-width: 1000px) {
+		padding: 4px 0 7px 0;
 	}
 
 	&__row {
@@ -29,27 +43,31 @@
 		}
 	}
 	&__navigation {
+		//margin: 0 -9px 0 0; //нейтрализация Hover:bold
+		font-family: $mainFont;
+		color: #ffffff;
+		font-size: 1.45rem;
+		font-weight: 300;
+		line-height: 1.3em;
 		display: flex;
 		align-items: center;
-		font-family: $mainFont;
-		font-size: 14px;
-		line-height: 1.3em;
-		color: $fontColor_1-0;
 		@media (max-width: 600px) {
-			margin-top: 10px;
+			//margin-top: 10px;
 			align-self: center;
 		}
 	}
 	&__logo {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		@media (max-width: 1000px) {
 			width: 100%;
 		}
 	}
 	&__burger {
 		display: none;
+		position: absolute;
+		top: calc(50% - 8px);
 		@media (max-width: 1000px) {
 			display: block;
 		}
@@ -88,7 +106,7 @@
 		}
 	}
 	&__item:not(:last-child) {
-		margin: 0 19px 0 0;
+		margin: 0 67px 0 0;
 		@media (max-width: 1000px) {
 			margin: 0 0 25px 0;
 		}
@@ -102,12 +120,12 @@
 				transform: rotateX(0);
 			}
 			.header-nav__link {
-				color: $fontColor_1-0;
-				font-weight: 700;
+				transform: scale(1.05);
+				//font-weight: 700;
 				//text-shadow: 0.25px 0.1px 0px $fontColor_1-0, -0.25px -0.1px 0px $fontColor_1-0;
 				@media (max-width: 1000px) {
-					color: $fontColor_1-0;
-					font-weight: 700;
+					//color: $fontColor_1-0;
+					//font-weight: 700;
 				}
 			}
 			.dropdawn-icon_header-menu {
@@ -162,11 +180,14 @@
 		}
 	}
 	&__link {
+		display: block;
 		font-family: inherit;
 		font-size: inherit;
 		line-height: inherit;
 		color: inherit;
 		position: relative;
+		@include transition;
+		/* заглушка для жирного hover
 		&:before {
 			display: block;
 			content: attr(title);
@@ -176,6 +197,7 @@
 			overflow: hidden;
 			visibility: hidden;
 		}
+		*/
 		&_menu {
 			padding: 0 20px 0 0;
 			&:before {
@@ -268,7 +290,7 @@
 
 .burger-menu {
 	position: relative;
-	width: 25px;
+	width: 23px;
 	height: 15px;
 	display: flex;
 	justify-content: center;
@@ -276,9 +298,9 @@
 	cursor: pointer;
 	&__line {
 		position: absolute;
-		height: 2px;
+		height: 3px;
 		width: 100%;
-		background: black;
+		background: #fff;
 		@include transition;
 		&:first-child {
 			top: 0;
