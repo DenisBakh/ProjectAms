@@ -1,5 +1,6 @@
 include /project/blocks/header/header.pug
 include /project/blocks/footer/footer.pug
+include /project/blocks/buttons/button.pug
 
 doctype html
 html(lang="ru")
@@ -20,6 +21,40 @@ html(lang="ru")
 
 
 			main.main
+				section.main__slider
+					.slider
+						.slider__item
+							.slider-item.ibg
+								.ibg__item(data-bg='425')
+									img(src="assets/img/bg320.jpg", alt="")
+								.ibg__item(data-bg='30000')
+									img(src="assets/img/BG.jpg", alt="")
+								.container
+									.slider-item__body
+										h2.slider-item__title Программа Фотодива
+										p.slider-item__descr Попробуйте инновационный фоторедактор
+										.slider-item__link
+											+button('Скачать', true)
+										a.slider-links__arrow
+											//
+												img(src="assets/img/arrow.png", alt="")
+						.slider__item
+							.slider-item.ibg
+								.ibg__item(data-bg='320')
+									img(src="assets/img/bg320.jpg", alt="")
+								.ibg__item(data-bg='30000')
+									img(src="assets/img/BG.jpg", alt="")
+								.container
+									.slider-item__body
+										h2.slider-item__title Программа Фотодива
+										p.slider-item__descr Попробуйте инновационный фоторедактор
+										.slider-item__link
+											+button('Скачать', true)
+										a.slider-links__arrow
+											//
+												img(src="assets/img/arrow.png", alt="")
+
+
 
 
 

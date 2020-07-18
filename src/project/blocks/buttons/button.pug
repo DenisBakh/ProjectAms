@@ -1,0 +1,9 @@
+mixin button (name='Скачать', isArrow=true)
+	if isArrow
+		a.button.button_with-arrow
+			span.button__text=name
+			img.button__icon(src="/assets/img/tick.png", alt="arrow")
+	else
+		a.button
+			span.button__text=name
+			img.button__icon(src="/assets/img/tick.png", alt="arrow")

@@ -31,10 +31,16 @@
 			flex-direction: column;
 		}
 	}
-	&__item:not(:last-child) {
-		margin: 0 40px 0 0;
-		@media (max-width: 700px) {
-			margin: 0 0 17px 0;
+	&__item {
+		@include transition;
+		&:hover {
+			transform: scale(1.05);
+		}
+		&:not(:last-child) {
+			margin: 0 40px 0 0;
+			@media (max-width: 700px) {
+				margin: 0 0 17px 0;
+			}
 		}
 	}
 	&__link {
